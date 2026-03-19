@@ -16,19 +16,20 @@ This framework addresses temporal recommendation in environments with extreme sp
 3. **Temporal fitness evaluation** — Unified fitness f_hybrid = f_total + γ·f_pred rewards alignment with future user behavior
 
 ## Repository Structure
-
 ```
 SWWP-EEDPSO/
-├── fitness.py           # Unified fitness function (shared by ALL algorithms)
-├── swwp.py              # Sliding-Window Weighted Popularity model
-├── eedpso.py            # Vanilla EEDPSO baseline
-├── swwp_eedpso.py       # SWWP-EEDPSO hybrid framework (proposed method)
-├── de.py                # Differential Evolution baseline
-├── ga.py                # Genetic Algorithm baseline
-├── run_experiment.py    # Experiment runner
-├── config.py            # Hyperparameter configuration
-├── LICENSE              # MIT License
-└── README.md            # This file
+├── README.md              # This file
+├── config.py              # Hyperparameter configuration
+├── run_experiment.py      # Experiment runner
+├── LICENSE                # MIT License
+└── core/                  # Core algorithm modules
+    ├── __init__.py
+    ├── fitness.py         # Unified fitness function (shared by ALL algorithms)
+    ├── swwp.py            # Sliding-Window Weighted Popularity model
+    ├── eedpso.py          # Vanilla EEDPSO (baseline)
+    ├── swwp_eedpso.py     # SWWP-EEDPSO hybrid framework (proposed method)
+    ├── de.py              # Differential Evolution (baseline)
+    └── ga.py              # Genetic Algorithm (baseline)
 ```
 
 ## Requirements
